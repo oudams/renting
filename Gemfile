@@ -13,8 +13,8 @@ gem "coffee-rails", "~> 4.2"
 gem "devise"
 gem "jbuilder", "~> 2.5"
 gem "turbolinks", "~> 5"
-
 gem "bootsnap", ">= 1.1.0", require: false
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
@@ -33,8 +33,8 @@ group :test do
   gem "capybara"
   gem "chromedriver-helper"
   gem "factory_bot_rails"
+  gem "launchy"
   gem "selenium-webdriver"
-	gem "launchy"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
