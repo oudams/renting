@@ -1,5 +1,5 @@
 
-(function ($) {
+$(document).ready(function() {
     "use strict";
 
     /*[ Load page ]
@@ -24,6 +24,29 @@
         transition: function(url){ window.location.href = url; }
     });
 
+    $(".selection-1").select2({
+      minimumResultsForSearch: 20,
+      dropdownParent: $('#dropDownSelect1')
+    });
+
+    /*[ Declare Select2]
+    ===========================================================*/
+    $('.block2-btn-addcart').each(function(){
+      var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+      $(this).on('click', function(){
+        swal(nameProduct, "is added to cart !", "success");
+      });
+    });
+
+
+    /*[ Add Wishlist]
+    ===========================================================*/
+    $('.block2-btn-addwishlist').each(function(){
+      var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+      $(this).on('click', function(){
+        swal(nameProduct, "is added to wishlist !", "success");
+      });
+    });
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
@@ -201,4 +224,4 @@
         $('.video-mo-01').css('opacity','0');
     });
 
-})(jQuery);
+});
