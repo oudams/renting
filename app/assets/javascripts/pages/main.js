@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     "use strict";
 
@@ -24,20 +23,12 @@ $(document).ready(function() {
         transition: function(url){ window.location.href = url; }
     });
 
+    /*[ Declare Select2]
+    ===========================================================*/
     $(".selection-1").select2({
       minimumResultsForSearch: 20,
       dropdownParent: $('#dropDownSelect1')
     });
-
-    /*[ Declare Select2]
-    ===========================================================*/
-    $('.block2-btn-addcart').each(function(){
-      var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-      $(this).on('click', function(){
-        swal(nameProduct, "is added to cart !", "success");
-      });
-    });
-
 
     /*[ Add Wishlist]
     ===========================================================*/
@@ -47,6 +38,7 @@ $(document).ready(function() {
         swal(nameProduct, "is added to wishlist !", "success");
       });
     });
+
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
