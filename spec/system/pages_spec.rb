@@ -21,6 +21,14 @@ describe "Pages" do
     expect(current_path).to eq(new_user_session_path)
   end
 
+  it "shows link to dashboard for admin after login" do
+    user = create(:user, :admin)
+
+    sign_in(user)
+    visit root_path
+    expect(page).to have_link("Dashboard", href: dashboard_root_path)
+  end
+
   it "can logout" do
     user = create(:user)
 

@@ -80,12 +80,14 @@
               <%= link_to(destroy_user_session_path, method: :delete, class: "header-wrapicon1 dis-block", title: "logout") do %>
                 <%= image_tag("pages/icons/logout.png", class: "header-icon1", alt: "ICON", size: "25") %>
               <% end %>
+              <%= link_to_if(current_user.admin?, "Dashboard", dashboard_root_path, class: "header-wrapicon1 dis-block", title: "dashboard") %>
             <% else %>
               <%= link_to(new_user_session_path, class: "header-wrapicon1 dis-block", title: "login") do %>
                 <%= image_tag("pages/icons/login.png", class: "header-icon1", alt: "ICON", size: "25") %>
               <% end %>
             <% end %>
 
+            <%= link_to("Posts", dashboard_posts_path, class: "header-wrapicon1 dis-block", title: "posts") %>
             <span class="linedivide1"></span>
 
             <div class="header-wrapicon2">

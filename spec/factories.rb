@@ -10,5 +10,15 @@ FactoryBot.define do
   factory :user do
     email
     password
+
+    trait :admin do
+      role "admin"
+    end
+  end
+
+  factory :post do
+    title "post title"
+    content "Sample post content."
+    status "active"
   end
 end
