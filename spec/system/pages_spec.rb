@@ -26,7 +26,7 @@ describe "Pages" do
 
     sign_in(user)
     visit root_path
-    expect(page).to have_link("Dashboard", href: dashboard_root_path)
+    expect(page).to have_link("dashboard", href: dashboard_root_path)
   end
 
   it "can logout" do
